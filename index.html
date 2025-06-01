@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1 id="gameTitle">🎮 Ultimate Tic Tac Toe</h1>
+
+    <div class="mode-select">
+        <button onclick="startMode('pvp')">👥 Player vs Player</button>
+        <button onclick="startMode('pvc')">🤖 Player vs Computer</button>
+        <select id="aiDifficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <div class="theme-select">
+        <label for="themePicker">🎨 Theme:</label>
+        <select id="themePicker" onchange="changeTheme(this.value)">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+          <option value="neon">Neon</option>
+        </select>
+    </div>      
+      
+    <div id="scoreboard">
+      <span id="scoreX">X: 0</span>
+      <span id="scoreO">O: 0</span>
+      <span id="draws">Draws: 0</span>
+    </div>
+
+    <div id="board"></div>
+
+    <button id="restartBtn" onclick="restartGame()">🔁 Restart</button>
+    
+    <div id="resultModal" class="hidden">
+        <div class="modal-content">
+          <h2 id="resultText"></h2>
+          <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+      
+  </main>
+
+  
+
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="drawSound" src="draw.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
