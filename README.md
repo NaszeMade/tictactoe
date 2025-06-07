@@ -1,5 +1,5 @@
 ## TicTacToe
-A powerful, single-file TicTacToe game with advanced features like win count, PvP, PvC, and multi-tab support.
+A powerful, single-file TicTacToe game with interactive and advanced features like win count, PvP, PvC, and multi-tab support.
 
 ## Features
 - win count
